@@ -4,6 +4,9 @@ Server side for an android app that is for ordering food and get it delivered to
 ## What is does
 Connects to database. Creates a database in MySQL, table users, and inserts some values. 
 
+### To-do
+Write code that lets put or take data from tables in order login, register in the app.
+
 ## Set up
 creatDatabase.php only run once, next time it is enough to run Apache, MySQL on XAMPP
 
