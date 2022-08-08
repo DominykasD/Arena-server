@@ -7,7 +7,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$email = $_Get['email'];
-$password = $_Get['password'];
-$phoneNumber = $_Get['phoneNumber'];
-$result = $conn->query("SELECT * FROM Arena.Users WHERE email = '$email' AND password = '$password'");
+if((isset($_POST['email']) && isset($_POST['password'])) && !empty($_POST['email']) && !empty($_POST['password'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $sql = "SELECT * FROM Arena.Users WHERE email = '$email' AND password = '$password'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        echo "success";
+    } else {
+        echo "failure";
+    }
+}
