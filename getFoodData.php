@@ -15,6 +15,11 @@ if ($result->num_rows > 0) {
     }
     $json = json_encode($data);
     file_put_contents('food.json', $json);
+    if (file_exists('food.json')) {
+        echo "success";
+    } else {
+        echo "failure";
+    }
 } else {
     echo "0 results";
 }

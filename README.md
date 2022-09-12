@@ -2,7 +2,7 @@
 Server side for an android app that is for ordering food and get it delivered to your location in a stadium. Link to the app: https://github.com/DominykasD/Arena
 
 ## What is does
-Connects to database. Creates a database in MySQL, table users, and inserts some values. Creates a table foodModel to store foodNames, descriptions, etc.
+Connects to database. Creates a database in MySQL, table users, and inserts some values. Creates a table product to store foodNames, descriptions, etc.
 
 ## Set up
 creatDatabase.php only run once, next time it is enough to run Apache, MySQL on XAMPP

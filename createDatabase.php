@@ -17,17 +17,17 @@ if ($conn->connect_error) {
 // Create database
 $sql = "CREATE DATABASE IF NOT EXISTS Arena";
 if ($conn->query($sql) === TRUE) {
-    // echo "Database created successfully<br>";
+    echo "Database created successfully<br>";
 } else {
-    echo "Error creating database: " . $conn->error;
+    echo "Error creating database: " . $conn->error . "<br>";
 }
 
 // sql to create table users
 $sql = "CREATE TABLE IF NOT EXISTS Arena.Users (
-id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-email VARCHAR(50) NOT NULL UNIQUE,
-phoneNumber VARCHAR(50) NOT NULL UNIQUE,
-password VARCHAR(50) NOT NULL
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    phoneNumber VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(50) NOT NULL
 )";
 
 
@@ -38,7 +38,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 // Insert some data into table
-$sql = "INSERT INTO Arena.Users (email, phoneNumber, password) 
+$sql = "INSERT INTO IF NOT EXISTS Arena.Users (email, phoneNumber, password) 
 VALUES ('domke@arena.com', '+37069889781', 'domke'),
         ('user123@arena.com', '+37069889541', 'user123'),
         ('jonas@arena.com', '+37069889542', 'jonas'),
@@ -46,25 +46,25 @@ VALUES ('domke@arena.com', '+37069889781', 'domke'),
 
 
 if ($conn->multi_query($sql) === TRUE) {
-    echo "New records created successfully";
+    echo "New records created successfully" . "<br>";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error . "<br>";
   }
 
 
 // sql to create table product
-$sql = "CREATE TABLE Arena.product (
-id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(50) NOT NULL,
-description VARCHAR(50) NOT NULL UNIQUE,
-type VARCHAR(50) NOT NULL,
-price FLOAT NOT NULL
+$sql = "CREATE TABLE IF NOT EXISTS Arena.product (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    description VARCHAR(50) NOT NULL UNIQUE,
+    type VARCHAR(50) NOT NULL,
+    price FLOAT NOT NULL
 )";
 
 if ($conn->query($sql) === TRUE) {
     echo "Table product created successfully<br>";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Error creating table: " . $conn->error . "<br>";
 }
 
 // Insert some data into table product
@@ -81,25 +81,25 @@ VALUES ('Pica', 'Pica su sūriu', 'picos', '10'),
         ('Kebabas su vištiena', 'Kebabas su vištiena', 'kebabai', '5')";
 
 if ($conn->multi_query($sql) === TRUE) {
-    echo "New records created successfully";
+    echo "New records created successfully<br>";
   } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $conn->error . "<br>";
   }
 
 // create table cart
-$sql = "CREATE TABLE Arena.cart (
-id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-user_id INT UNSIGNED NOT NULL,
-product_id INT UNSIGNED NOT NULL,
-quantity INT NOT NULL,
-FOREIGN KEY (user_id) REFERENCES Arena.Users(id),
-FOREIGN KEY (product_id) REFERENCES Arena.product(id)
+$sql = "CREATE TABLE IF NOT EXISTS Arena.cart (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL,
+    product_id INT UNSIGNED NOT NULL,
+    quantity INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Arena.Users(id),
+    FOREIGN KEY (product_id) REFERENCES Arena.product(id)
 )";
 
 if($conn->query($sql) === TRUE){
     echo "Table cart created successfully<br>";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Error creating table: " . $conn->error . "<br>";
 }
 
 $conn->close();

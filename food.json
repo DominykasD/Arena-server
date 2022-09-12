@@ -1,1 +1,72 @@
-[{"id":"1","name":"Pica","description":"Pica su s\u016briu","type":"picos","price":"10"},{"id":"2","name":"Pica a\u0161tri","description":"A\u0161tri pica","type":"picos","price":"15"},{"id":"3","name":"M\u0117sainis","description":"M\u0117sainis su jautiena","type":"m\u0117sainiai","price":"5"},{"id":"4","name":"M\u0117sainis","description":"M\u0117sainis su vi\u0161tiena","type":"m\u0117sainiai","price":"5"},{"id":"5","name":"Ledai","description":"Ledai su bra\u0161k\u0117mis","type":"desertas","price":"3"},{"id":"6","name":"Salotos skanios","description":"\u012evairios salotos","type":"salotos","price":"2"},{"id":"7","name":"Coca cola","description":"Cola g\u0117rimas","type":"g\u0117rimai","price":"1.5"},{"id":"8","name":"Sprite","description":"Sprite g\u0117rimas","type":"g\u0117rimai","price":"1.5"},{"id":"9","name":"Kepta duona","description":"Kepta duona su s\u016briu","type":"u\u017ekand\u017eiai","price":"2"},{"id":"10","name":"Kebabas su vi\u0161tiena","description":"Kebabas su vi\u0161tiena","type":"kebabai","price":"5"}]
+[
+  {
+    "id": "1",
+    "name": "Pica",
+    "description": "Pica su s\u016briu",
+    "type": "picos",
+    "price": "10"
+  },
+  {
+    "id": "2",
+    "name": "Pica a\u0161tri",
+    "description": "A\u0161tri pica",
+    "type": "picos",
+    "price": "15"
+  },
+  {
+    "id": "3",
+    "name": "M\u0117sainis",
+    "description": "M\u0117sainis su jautiena",
+    "type": "m\u0117sainiai",
+    "price": "5"
+  },
+  {
+    "id": "4",
+    "name": "M\u0117sainis",
+    "description": "M\u0117sainis su vi\u0161tiena",
+    "type": "m\u0117sainiai",
+    "price": "5"
+  },
+  {
+    "id": "5",
+    "name": "Ledai",
+    "description": "Ledai su bra\u0161k\u0117mis",
+    "type": "desertai",
+    "price": "3"
+  },
+  {
+    "id": "6",
+    "name": "Salotos skanios",
+    "description": "\u012evairios salotos",
+    "type": "salotos",
+    "price": "2"
+  },
+  {
+    "id": "7",
+    "name": "Coca cola",
+    "description": "Cola g\u0117rimas",
+    "type": "g\u0117rimai",
+    "price": "1.5"
+  },
+  {
+    "id": "8",
+    "name": "Sprite",
+    "description": "Sprite g\u0117rimas",
+    "type": "g\u0117rimai",
+    "price": "1.5"
+  },
+  {
+    "id": "9",
+    "name": "Kepta duona",
+    "description": "Kepta duona su s\u016briu",
+    "type": "u\u017ekand\u017eiai",
+    "price": "2"
+  },
+  {
+    "id": "10",
+    "name": "Kebabas su vi\u0161tiena",
+    "description": "Kebabas su vi\u0161tiena",
+    "type": "kebabai",
+    "price": "5"
+  }
+]
