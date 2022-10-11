@@ -10,8 +10,8 @@ creatDatabase.php only run once, next time it is enough to run Apache, MySQL on 
 First time:
 1) Install XAMPP
 2) Run Apache, MySQL
-3) Create a folder and put the repository files in XAMPP htdocs folder
-4) Go to http://localhost/folderName/createDatabase.php (creates a database, table users, foodModel and inserts some values)
+3) Create a folder with a name ArenaServer and put the repository files in XAMPP htdocs folder
+4) Go to http://localhost/ArenaServer/createDatabase.php (creates a database, table users, foodModel and inserts some values)
 5) http://localhost/folderName/getFoodData.php to create a JSON file called food.json which contain foodModel table data or copy the one in the repository
 6) put JSON file in *\main\res\raw folder if folder not present create new one
 5) Start the android app
